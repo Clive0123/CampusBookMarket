@@ -29,10 +29,16 @@ namespace CampusBookMarket.ServiceReference1 {
         private CampusBookMarket.ServiceReference1.InvoiceLine[] InvoiceLinesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private CampusBookMarket.ServiceReference1.User UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int activeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string categoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime dateBidField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string descriptionField;
@@ -47,7 +53,10 @@ namespace CampusBookMarket.ServiceReference1 {
         private decimal priceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string quantityField;
+        private int quatityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int userIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -86,6 +95,19 @@ namespace CampusBookMarket.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public CampusBookMarket.ServiceReference1.User User {
+            get {
+                return this.UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserField, value) != true)) {
+                    this.UserField = value;
+                    this.RaisePropertyChanged("User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int active {
             get {
                 return this.activeField;
@@ -107,6 +129,19 @@ namespace CampusBookMarket.ServiceReference1 {
                 if ((object.ReferenceEquals(this.categoryField, value) != true)) {
                     this.categoryField = value;
                     this.RaisePropertyChanged("category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime dateBid {
+            get {
+                return this.dateBidField;
+            }
+            set {
+                if ((this.dateBidField.Equals(value) != true)) {
+                    this.dateBidField = value;
+                    this.RaisePropertyChanged("dateBid");
                 }
             }
         }
@@ -164,14 +199,152 @@ namespace CampusBookMarket.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string quantity {
+        public int quatity {
             get {
-                return this.quantityField;
+                return this.quatityField;
             }
             set {
-                if ((object.ReferenceEquals(this.quantityField, value) != true)) {
-                    this.quantityField = value;
-                    this.RaisePropertyChanged("quantity");
+                if ((this.quatityField.Equals(value) != true)) {
+                    this.quatityField = value;
+                    this.RaisePropertyChanged("quatity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int userId {
+            get {
+                return this.userIdField;
+            }
+            set {
+                if ((this.userIdField.Equals(value) != true)) {
+                    this.userIdField = value;
+                    this.RaisePropertyChanged("userId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/CampusService")]
+    [System.SerializableAttribute()]
+    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private CampusBookMarket.ServiceReference1.Invoice[] InvoicesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private CampusBookMarket.ServiceReference1.Product[] ProductsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string emailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string passwordField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public CampusBookMarket.ServiceReference1.Invoice[] Invoices {
+            get {
+                return this.InvoicesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InvoicesField, value) != true)) {
+                    this.InvoicesField = value;
+                    this.RaisePropertyChanged("Invoices");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public CampusBookMarket.ServiceReference1.Product[] Products {
+            get {
+                return this.ProductsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductsField, value) != true)) {
+                    this.ProductsField = value;
+                    this.RaisePropertyChanged("Products");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.emailField, value) != true)) {
+                    this.emailField = value;
+                    this.RaisePropertyChanged("email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.passwordField, value) != true)) {
+                    this.passwordField = value;
+                    this.RaisePropertyChanged("password");
                 }
             }
         }
@@ -452,115 +625,6 @@ namespace CampusBookMarket.ServiceReference1 {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/CampusService")]
-    [System.SerializableAttribute()]
-    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CampusBookMarket.ServiceReference1.Invoice[] InvoicesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string emailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string passwordField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CampusBookMarket.ServiceReference1.Invoice[] Invoices {
-            get {
-                return this.InvoicesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.InvoicesField, value) != true)) {
-                    this.InvoicesField = value;
-                    this.RaisePropertyChanged("Invoices");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string email {
-            get {
-                return this.emailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.emailField, value) != true)) {
-                    this.emailField = value;
-                    this.RaisePropertyChanged("email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.passwordField, value) != true)) {
-                    this.passwordField = value;
-                    this.RaisePropertyChanged("password");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
@@ -570,6 +634,12 @@ namespace CampusBookMarket.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetProduct", ReplyAction="http://tempuri.org/IService1/GetProductResponse")]
         System.Threading.Tasks.Task<CampusBookMarket.ServiceReference1.Product> GetProductAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getUser", ReplyAction="http://tempuri.org/IService1/getUserResponse")]
+        CampusBookMarket.ServiceReference1.User getUser(string password, string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getUser", ReplyAction="http://tempuri.org/IService1/getUserResponse")]
+        System.Threading.Tasks.Task<CampusBookMarket.ServiceReference1.User> getUserAsync(string password, string email);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetProducts", ReplyAction="http://tempuri.org/IService1/GetProductsResponse")]
         CampusBookMarket.ServiceReference1.Product[] GetProducts();
@@ -594,6 +664,12 @@ namespace CampusBookMarket.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/AddProduct", ReplyAction="http://tempuri.org/IService1/AddProductResponse")]
         System.Threading.Tasks.Task<int> AddProductAsync(CampusBookMarket.ServiceReference1.Product product);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetProductByUserEmail", ReplyAction="http://tempuri.org/IService1/GetProductByUserEmailResponse")]
+        CampusBookMarket.ServiceReference1.Product GetProductByUserEmail(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetProductByUserEmail", ReplyAction="http://tempuri.org/IService1/GetProductByUserEmailResponse")]
+        System.Threading.Tasks.Task<CampusBookMarket.ServiceReference1.Product> GetProductByUserEmailAsync(string email);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -631,6 +707,14 @@ namespace CampusBookMarket.ServiceReference1 {
             return base.Channel.GetProductAsync(id);
         }
         
+        public CampusBookMarket.ServiceReference1.User getUser(string password, string email) {
+            return base.Channel.getUser(password, email);
+        }
+        
+        public System.Threading.Tasks.Task<CampusBookMarket.ServiceReference1.User> getUserAsync(string password, string email) {
+            return base.Channel.getUserAsync(password, email);
+        }
+        
         public CampusBookMarket.ServiceReference1.Product[] GetProducts() {
             return base.Channel.GetProducts();
         }
@@ -661,6 +745,14 @@ namespace CampusBookMarket.ServiceReference1 {
         
         public System.Threading.Tasks.Task<int> AddProductAsync(CampusBookMarket.ServiceReference1.Product product) {
             return base.Channel.AddProductAsync(product);
+        }
+        
+        public CampusBookMarket.ServiceReference1.Product GetProductByUserEmail(string email) {
+            return base.Channel.GetProductByUserEmail(email);
+        }
+        
+        public System.Threading.Tasks.Task<CampusBookMarket.ServiceReference1.Product> GetProductByUserEmailAsync(string email) {
+            return base.Channel.GetProductByUserEmailAsync(email);
         }
     }
 }

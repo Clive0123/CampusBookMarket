@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using HashPass;
 using CampusBookMarket.ServiceReference1;
 
 namespace CampusBookMarket
@@ -12,7 +13,7 @@ namespace CampusBookMarket
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
 
@@ -68,4 +69,3 @@ namespace CampusBookMarket
         }
     }
     
-}

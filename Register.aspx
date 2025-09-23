@@ -16,7 +16,7 @@
     <div class="form-header">
         <h2>Create Account</h2>
     </div>
-    <form class="form-body" runat="server">
+    <div class="form-body" runat="server">
         <div class="form-group">
             <label for="fullname">Full Name</label>
             <input type="text" id="fullname" placeholder="Enter your full name" runat="server" />
@@ -40,7 +40,7 @@
           
 
         </div>
-    </form>
+    </div>
 </div>
 
        

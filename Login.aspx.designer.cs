@@ -15,22 +15,22 @@ namespace CampusBookMarket
     {
 
         /// <summary>
-        /// txtEmail control.
+        /// reg_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl reg_email;
 
         /// <summary>
-        /// txtPassword control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword password;
 
         /// <summary>
         /// btnLogin control.
@@ -40,5 +40,14 @@ namespace CampusBookMarket
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
+
+        /// <summary>
+        /// lblResponse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResponse;
     }
 }

@@ -615,13 +615,14 @@
             <li><a href="#">Electronics</a></li>
             <li><a href="#">Dorm Essentials</a></li>
             <li><a href="#">Stationery</a></li>
+            <li><a href="profile.aspx">Profile</a></li>
         </ul>
 
         <div class="nav-actions">
             
-            <asp:Button ID="loginBtn"  class="btn btn-login" runat="server" Text="Login" OnClick="loginBtn_Click" />
+            <asp:Button ID="loginBtn"  class="btn btn-login" runat="server" Text="Login" OnClick="loginBtn_Click"  />
             
-            <asp:Button ID="registerBtn" class="btn btn-register" runat="server" Text="Register" OnClick="registerBtn_Click" />
+            <asp:Button ID="registerBtn" class="btn btn-register" runat="server" Text="Register" OnClick="registerBtn_Click"  />
             <div class="cart-icon" id="cartIcon">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="cart-count">3</span>
