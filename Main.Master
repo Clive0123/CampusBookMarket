@@ -616,6 +616,7 @@
             <li><a href="#">Dorm Essentials</a></li>
             <li><a href="#">Stationery</a></li>
             <li><a href="profile.aspx">Profile</a></li>
+           <li><a href="pickup.aspx">Pickups Points</a></li>
         </ul>
 
         <div class="nav-actions">
