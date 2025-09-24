@@ -26,9 +26,6 @@ namespace CampusBookMarket.ServiceReference1 {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CampusBookMarket.ServiceReference1.InvoiceLine[] InvoiceLinesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private CampusBookMarket.ServiceReference1.User UserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -53,7 +50,7 @@ namespace CampusBookMarket.ServiceReference1 {
         private decimal priceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int quatityField;
+        private string quantityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int userIdField;
@@ -77,19 +74,6 @@ namespace CampusBookMarket.ServiceReference1 {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CampusBookMarket.ServiceReference1.InvoiceLine[] InvoiceLines {
-            get {
-                return this.InvoiceLinesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.InvoiceLinesField, value) != true)) {
-                    this.InvoiceLinesField = value;
-                    this.RaisePropertyChanged("InvoiceLines");
                 }
             }
         }
@@ -199,14 +183,14 @@ namespace CampusBookMarket.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int quatity {
+        public string quantity {
             get {
-                return this.quatityField;
+                return this.quantityField;
             }
             set {
-                if ((this.quatityField.Equals(value) != true)) {
-                    this.quatityField = value;
-                    this.RaisePropertyChanged("quatity");
+                if ((object.ReferenceEquals(this.quantityField, value) != true)) {
+                    this.quantityField = value;
+                    this.RaisePropertyChanged("quantity");
                 }
             }
         }
@@ -361,147 +345,6 @@ namespace CampusBookMarket.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="InvoiceLine", Namespace="http://schemas.datacontract.org/2004/07/CampusService")]
-    [System.SerializableAttribute()]
-    public partial class InvoiceLine : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CampusBookMarket.ServiceReference1.Invoice InvoiceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private CampusBookMarket.ServiceReference1.Product ProductField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int invoiceIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal priceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int productIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int quantityField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CampusBookMarket.ServiceReference1.Invoice Invoice {
-            get {
-                return this.InvoiceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.InvoiceField, value) != true)) {
-                    this.InvoiceField = value;
-                    this.RaisePropertyChanged("Invoice");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public CampusBookMarket.ServiceReference1.Product Product {
-            get {
-                return this.ProductField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ProductField, value) != true)) {
-                    this.ProductField = value;
-                    this.RaisePropertyChanged("Product");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int invoiceId {
-            get {
-                return this.invoiceIdField;
-            }
-            set {
-                if ((this.invoiceIdField.Equals(value) != true)) {
-                    this.invoiceIdField = value;
-                    this.RaisePropertyChanged("invoiceId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal price {
-            get {
-                return this.priceField;
-            }
-            set {
-                if ((this.priceField.Equals(value) != true)) {
-                    this.priceField = value;
-                    this.RaisePropertyChanged("price");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int productId {
-            get {
-                return this.productIdField;
-            }
-            set {
-                if ((this.productIdField.Equals(value) != true)) {
-                    this.productIdField = value;
-                    this.RaisePropertyChanged("productId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int quantity {
-            get {
-                return this.quantityField;
-            }
-            set {
-                if ((this.quantityField.Equals(value) != true)) {
-                    this.quantityField = value;
-                    this.RaisePropertyChanged("quantity");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Invoice", Namespace="http://schemas.datacontract.org/2004/07/CampusService")]
     [System.SerializableAttribute()]
     public partial class Invoice : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -611,6 +454,131 @@ namespace CampusBookMarket.ServiceReference1 {
                 if ((this.userIdField.Equals(value) != true)) {
                     this.userIdField = value;
                     this.RaisePropertyChanged("userId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InvoiceLine", Namespace="http://schemas.datacontract.org/2004/07/CampusService")]
+    [System.SerializableAttribute()]
+    public partial class InvoiceLine : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private CampusBookMarket.ServiceReference1.Invoice InvoiceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int invoiceIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal priceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int productIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int quantityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public CampusBookMarket.ServiceReference1.Invoice Invoice {
+            get {
+                return this.InvoiceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.InvoiceField, value) != true)) {
+                    this.InvoiceField = value;
+                    this.RaisePropertyChanged("Invoice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int invoiceId {
+            get {
+                return this.invoiceIdField;
+            }
+            set {
+                if ((this.invoiceIdField.Equals(value) != true)) {
+                    this.invoiceIdField = value;
+                    this.RaisePropertyChanged("invoiceId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal price {
+            get {
+                return this.priceField;
+            }
+            set {
+                if ((this.priceField.Equals(value) != true)) {
+                    this.priceField = value;
+                    this.RaisePropertyChanged("price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int productId {
+            get {
+                return this.productIdField;
+            }
+            set {
+                if ((this.productIdField.Equals(value) != true)) {
+                    this.productIdField = value;
+                    this.RaisePropertyChanged("productId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                if ((this.quantityField.Equals(value) != true)) {
+                    this.quantityField = value;
+                    this.RaisePropertyChanged("quantity");
                 }
             }
         }
